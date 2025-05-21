@@ -71,6 +71,10 @@ jobs:
         with:
           name: dist
           path: ./dist
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
