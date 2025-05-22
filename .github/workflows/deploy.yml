@@ -62,15 +62,27 @@ jobs:
         with:
           name: dist
           path: ./dist
+          retention-days: 1
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: dist
+          path: ./dist
+
+      - name: List files (Debug)
+        run: ls -la ./dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          path: ./dist
