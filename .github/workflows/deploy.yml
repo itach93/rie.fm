@@ -76,6 +76,15 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Create 404.html for SPA routing
+        run: cp ./dist/index.html ./dist/404.html
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+
   deploy:
     # environment:
     #   name: github-pages
