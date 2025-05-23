@@ -85,16 +85,12 @@ jobs:
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          enablement: skip
       # - name: Download artifacts
       #   uses: actions/download-artifact@v3
       #   with:
       #     name: dist
       #     path: ./dist
 
-      - name: List files (Debug)
-        run: ls -la ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
