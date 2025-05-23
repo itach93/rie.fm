@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# rie.fm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for broadcasting spiritual content, providing users with a comprehensive platform for audio streaming, podcasts, and daily text content.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+rie.fm combines live audio streaming with on-demand podcasts and daily text content to deliver a complete and accessible spiritual content experience. Built as a Progressive Web App (PWA), the platform works seamlessly across devices and platforms, offering both online and offline functionalities.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Content Streaming**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+  - Live audio broadcasting
+  - On-demand podcast library
+  - Daily text content
+  - Offline access to downloaded content
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **User Experience**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+  - User authentication (email and social networks)
+  - Customizable push notifications
+  - Advanced audio player with background playback
+  - Multilingual interface (French/English)
+  - Content sharing and promotion tools
+  - Download capabilities for offline access
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+- **Analytics**
+
+  - Engagement tracking
+  - User behavior analysis
+  - Content performance metrics
+
+- **Administration**
+  - Content management system
+  - Streamlined publishing workflow
+  - Performance monitoring
+
+## Development
+
+### Prerequisites
+
+- Node.js and npm
+- Firebase CLI
+
+### Setup Instructions
+
+[Include setup and installation steps here]
+
+## Contributing
+
+[Include contribution guidelines here]
+
+## License
+
+[Include license information here]
