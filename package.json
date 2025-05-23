@@ -36,11 +36,11 @@
     "vite": "^6.3.5"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,css,html}": [
+    "*.{ts,tsx,js,js,css,html}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{md,yml,yaml}": [
+    "*.{json,md,yml,yaml}": [
       "prettier --write"
     ]
   }
