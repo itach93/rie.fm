@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/rie.fm/",
               "budgets": [
                 {
                   "type": "initial",
