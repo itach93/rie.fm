@@ -52,20 +52,29 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      #   with:
+      #     fetch-depth: 0
 
-      - name: Download build artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist/rie.fm
+      # - name: Download build artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./dist/rie.fm
 
-      - name: Setup GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist/rie.fm
+      # - name: Setup GitHub Pages
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./dist/rie.fm
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        run: |
+          npx angular-cli-ghpages --dir=dist/rie.fm
+
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
