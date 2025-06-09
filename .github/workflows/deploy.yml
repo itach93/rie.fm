@@ -73,7 +73,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         run: |
-          npx angular-cli-ghpages --dir=dist/rie.fm
+          npx angular-cli-ghpages --dir=dist/rie.fm/browser
 
         env:
           CI: true
