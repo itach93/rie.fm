@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/rie.fm/browser",
+    "public": "dist/rie.fm",
     "ignore": [
       "firebase.json",
       "**/.*",
